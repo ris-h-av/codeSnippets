@@ -40,7 +40,5 @@ int main() {
 	
 	// creating a tree
 	root = buildTree(root);
-	
-
 }
 

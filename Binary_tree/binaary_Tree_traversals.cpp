@@ -15,7 +15,7 @@ public:
     
     
 };
-// constructiing tree
+// constructing tree
 
 node* buildTree(node* root){
         cout<<"enter data "<<endl;
