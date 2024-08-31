@@ -62,6 +62,35 @@ void levelOrderTraversal(node* root){
     }
 }
 
+node* builFromLevelOrder(int arr[],int n){
+    if(n==0){
+        return NULL;
+    }
+
+    node* root =new node(arr[0]);
+    queue<node*> q;
+    q.push(root);
+
+    int i=1;
+    while(i<n){
+        node* temp = q.front();
+        q.pop();
+
+        if(i<n && arr[i]!=-1){ // assigning left child
+            temp->left =new node(arr[i]);
+            q.push(temp->left);
+        }
+        i++;
+        if(i<n && arr[i]!=-1){
+            temp->right = new node(arr[i]);
+            q.push(temp->right);
+        }
+        i++;
+    }
+
+    return root;
+}
+
 void inorderTraversal(node* root){   // LNR (left-node-right)
     if(root == NULL){
         return;
@@ -95,7 +124,7 @@ int main() {
 	node* root = NULL;
 	
 	// creating a tree
-	root = buildTree(root);
+	// root = buildTree(root);
 	
     // cout<<"Level Order traversal of the tree is : "<<endl;
     // levelOrderTraversal(root);
@@ -106,7 +135,14 @@ int main() {
     // cout<<" PreOrder traversal of the tree is : "<<endl;
     //preorderTraversal(root);
 
-    cout<<" PostOrder traversal of the tree is : "<<endl;
-    postorderTraversal(root);
+    // cout<<" PostOrder traversal of the tree is : "<<endl;
+    // postorderTraversal(root);
+
+    // building a tree from the level order traversal
+    int arr[] = {1,2,3,4,5,6,7};
+    int n=7;
+    root = builFromLevelOrder(arr,n);
+
+    levelOrderTraversal(root);
 }   
 
