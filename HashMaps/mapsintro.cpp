@@ -43,14 +43,14 @@ int main(){
     // }
 
 
-    map<int,int> mp;
-    int arr[] = {1,2,3,4,3,2,1};
-    int n=7;
-    for(int i=0;i<n;i++){
-        mp[arr[i]]++;
-    }
-    for(auto it:mp){
-        cout<<it.first<<" "<<it.second<<endl;
-    }
+    // map<int,int> mp;
+    // int arr[] = {1,2,3,4,3,2,1};
+    // int n=7;
+    // for(int i=0;i<n;i++){
+    //     mp[arr[i]]++;
+    // }
+    // for(auto it:mp){
+    //     cout<<it.first<<" "<<it.second<<endl;
+    // }
     return 0;
 }
