@@ -128,13 +128,13 @@ int main(){
 
     // inserting at tail
 
-    // node *head = NULL;
-    // node *tail = NULL;
-    // head=insertAtTail(tail,10);
-    // insertAtTail(tail,20);
-    // insertAtTail(tail,30);
-    // insertAtTail(tail,40);
-    // print(head);
+    node *head = NULL;
+    node *tail = NULL;
+    head=insertAtTail(tail,10);
+    insertAtHead(head,20);
+    insertAtHead(head,30);
+    insertAtTail(tail,40);
+    print(head);
 
     // inesrt at any position
     // node *head=NULL;
@@ -150,17 +150,17 @@ int main(){
 
 
     // node deletion : 
-    node *head=NULL;
-    node *tail=NULL;
-    head = insertAtTail(tail,10);
-    insertAtTail(tail,20);
-    insertAtTail(tail,30);
-    insertAtTail(tail,40);
-    print(head);
+    // node *head=NULL;
+    // node *tail=NULL;
+    // head = insertAtTail(tail,10);
+    // insertAtTail(tail,20);
+    // insertAtTail(tail,30);
+    // insertAtTail(tail,40);
+    // print(head);
 
-    deletenode(head,tail,3);
-    print(head);
-    cout<<tail->data<<endl;
+    // deletenode(head,tail,3);
+    // print(head);
+    // cout<<tail->data<<endl;
 
     return 0;
 }
