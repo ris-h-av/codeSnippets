@@ -20,7 +20,8 @@ class Stack{
     }
 
     void Push(int data){
-        if(size-top > 1){
+        if(top != size-1){ // or another condition to check for stack overflow: (size-top > 1)
+            cout<<"size - top = "<<(size-top)<<endl;
             top++;
             arr[top]=data;
         }else{
@@ -35,6 +36,10 @@ class Stack{
         else{
             cout<<"stack underflow"<<endl;
         }
+    }
+
+    int getSize(){
+        return top+1;
     }
 
     int peek(){
@@ -54,6 +59,14 @@ class Stack{
         else{
             return false;
         }
+    }
+
+    void deleteStack(){
+        delete[] arr;
+        arr = nullptr;
+        top = -1;
+        size = 0;
+        cout<<"Stack deleted!"<<endl;
     }
 };
 int main(){
@@ -84,13 +97,17 @@ int main(){
     s.Push(1);
     s.Push(2);
     s.Push(3);
+    // s.Push(4);
     cout<<s.peek()<<endl;
     s.pop();
     cout<<s.peek()<<endl;
+    cout<<"Size -> "<<s.getSize()<<endl;
     if(s.isEmpty()){
         cout<<"stack is empty"<<endl;
     }else{
         cout<<"Stack is not empty"<<endl;
     }
+    // s.deleteStack();
+    // cout<<s.peek();
     return 0;
 }
