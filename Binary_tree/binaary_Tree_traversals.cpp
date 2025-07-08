@@ -138,10 +138,15 @@ int main() {
     // postorderTraversal(root);
 
     // building a tree from the level order traversal
-    int arr[] = {1,2,3,4,5,6,7};
-    int n=7;
+    int arr[] = {1,2,3,4,5,6};
+    int n=6;
     root = builFromLevelOrder(arr,n);
-
+    inorderTraversal(root);
+    cout<<endl;
+    preorderTraversal(root);
+    cout<<endl;
+    postorderTraversal(root);
+    cout<<endl;
     levelOrderTraversal(root);
 }   
 
